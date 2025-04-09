@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="DragDropTest.MainWindow"
+        Width="400" Height="300"
+        >
+
+    <Grid>
+        <StackPanel >
+            <Border Background="LightBlue" Padding="10" 
+                    Margin="110 8 8 8" Name="BorderBlue"
+                    PointerPressed="Item_PointerPressed"
+                    PointerMoved="Window_PointerMoved"
+                    PointerReleased="Item_PointerReleased"
+                    Height="80"
+                    >
+                <TextBlock Text="Item 1" />
+                <Border.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Test"></MenuItem>
+                        <MenuItem Header="My"></MenuItem>
+                    </ContextMenu>
+                </Border.ContextMenu>
+            </Border>
+            <TextBlock x:Name="DebugInfo" Margin="10" FontSize="14" Foreground="DarkSlateGray"/>
+        </StackPanel>
+    </Grid>
+</Window>
